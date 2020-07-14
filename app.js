@@ -24,6 +24,13 @@ const game = document.querySelector("#game"),
 minNum.textContent = min;
 maxNum.textContent = max;
 
+// PLay again event listener
+game.addEventListener("mousedown", function (e) {
+  if (e.target.className === "play-again") {
+    window.location.reload();
+  }
+});
+
 // Listen for guess
 guessBtn.addEventListener("click", function () {
   let guess = parseInt(guessInput.value);
